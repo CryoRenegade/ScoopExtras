@@ -8,7 +8,13 @@
     },
     "url": "https://github.com/bengtmartensson/IrScrutinizer/releases/download/Version-2.4.1/IrScrutinizer-2.4.1-bin.zip",
 	"hash": "sha512:e9c12c5505822524b0ef4a0c134980569ca8a47092877ce4a6649888471462b8e9f8d3c9283f6fca45ec5a459f0daff6719354bbf6cbad2ecf45c54cd16492eb",
-	"pre_install": "Set-Content \"$dir\\IrScrutinizer.cmd\" '@start javaw.exe -jar \"%~IrScrutinizer-2.4.1-jar-with-dependencies.jar\" %*' -Encoding Ascii",
+	"shortcuts": [
+		[
+		"IrScrutinizer-2.4.1-jar-with-dependencies.jar",
+		"IrScrutinizer"
+		]
+	],
+	"pre_install": "Set-Content \"$dir\\IrScrutinizer.cmd\" '@start javaw.exe -jar \"%~dp0IrScrutinizer\" %*' -Encoding Ascii",
     "checkver":{
 		"github": "https://github.com/bengtmartensson/IrScrutinizer"
 	},
